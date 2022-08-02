@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".note_DeleteNoteActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:letterSpacing="0.1"
+                android:text="Delete Notes"
+                android:textColor="#000000"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/courseLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/courseText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/select_year_sub_textview_background_drawable"
+            android:gravity="center"
+            android:text="Select Course"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/courseSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/select_year_sub_spinner_background_drawable"
+            android:popupBackground="@drawable/select_year_sub_spinner_popup_background_drawable"
+            android:spinnerMode="dropdown"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/termLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/termText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/select_year_sub_textview_background_drawable"
+            android:gravity="center"
+            android:text="Select Year/Sem."
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/termSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/select_year_sub_spinner_background_drawable"
+            android:popupBackground="@drawable/select_year_sub_spinner_popup_background_drawable"
+            android:spinnerMode="dropdown"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/subjectLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/subjectText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/select_year_sub_textview_background_drawable"
+            android:gravity="center"
+            android:text="Select Subject"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/subjectSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/select_year_sub_spinner_background_drawable"
+            android:popupBackground="@drawable/select_year_sub_spinner_popup_background_drawable"
+            android:spinnerMode="dropdown"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="9dp"
+            android:background="#000000" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/inputBlockerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AB000000"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/yearSubSubmitProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+</FrameLayout>

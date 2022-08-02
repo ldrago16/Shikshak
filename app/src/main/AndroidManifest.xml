@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/shikshak_aryabhatta_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/shikshak_aryabhatta_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".login_TeacherLoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- android:authorities="com.example.attend.fileprovider" replace with below authorities attribute in case of any errors -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path"
+                tools:replace="android:resource" />
+        </provider>
+
+        <activity android:name=".option_AllOptionContainerActivity"  android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".attend_SelectYearSubActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".attend_TakeAttandanceActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".attend_ShowMonthTotalAttendActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".note_UploadNoteActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".note_DeleteNoteActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".teacherTakeSubject_TeacherSelectSubjectActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".adddeletecourse_AddDeleteCourseActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".search_StudentSearchActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".promote_PromoteStudentActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".studentRegistrationActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".adddeletesubject_AddDeleteSubjectActivity" android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>

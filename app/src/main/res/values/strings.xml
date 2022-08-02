@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Shikshak</string>
+
+    <string name="login_preference">com.example.attend_login_preference</string>
+    <string name="login_preference_status">com.example.attend_login_status</string>
+
+    <string name="dialog_msg">You did not give attendance to one or more students. If you will continue unmarked students set as absent.\nDo you want to continue…</string>
+</resources>

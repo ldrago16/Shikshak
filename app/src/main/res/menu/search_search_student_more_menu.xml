@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:actionLayout="@layout/search_student_search_adapter_layout"
+        android:id="@+id/editMenuItem"
+        android:title="Edit"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/deleteMenuItem"
+        android:title="Delete"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/resetPassMenuItem"
+        android:title="Reset Password"
+        app:showAsAction="never" />
+</menu>

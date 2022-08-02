@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="0dp"
+    android:backgroundTint="#ECECEC"
+    android:background="@drawable/background_border_drawable">
+
+    <TextView
+        android:id="@+id/studentSrNo"
+        android:layout_width="25dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:background="@drawable/background_border_drawable"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="1dp"
+        android:autoSizeMaxTextSize="15dp"
+        android:autoSizeStepGranularity="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:background="@drawable/background_border_drawable"
+        app:layout_constraintStart_toEndOf="@id/studentSrNo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/radioConstraintLayout">
+
+        <TextView
+            android:id="@+id/studentName"
+            android:layout_width="0dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="2dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="Student Name"
+            android:textColor="#000000"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10dp"
+            android:autoSizeMaxTextSize="15dp"
+            android:autoSizeStepGranularity="1dp" />
+
+        <TextView
+            android:id="@+id/studentFatherName"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:paddingStart="2dp"
+            android:paddingEnd="1dp"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:text="FatherName"
+            android:maxLines="1"
+            android:visibility="gone"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="5dp"
+            android:autoSizeMaxTextSize="15dp"
+            android:autoSizeStepGranularity="0.1dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/radioConstraintLayout"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_border_drawable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RadioGroup
+            android:id="@+id/presentAbsentLeaveRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <RadioButton
+                    android:id="@+id/presentRadioButton"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:theme="@style/PresentRadioButtonTheme"
+                    android:gravity="center" />
+
+                <RadioButton
+                    android:id="@+id/absentRadioButton"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:theme="@style/AbsentRadioButtonTheme"
+                    android:gravity="center" />
+
+                <RadioButton
+                    android:id="@+id/leaveRadioButton"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:theme="@style/LeaveRadioButtonTheme"
+                    android:gravity="center" />
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--        <TextView-->
+    <!--            android:layout_width="40sp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:text="P."-->
+    <!--            android:gravity="center"-->
+    <!--            android:textSize="30sp"></TextView>-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="40sp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:text="A."-->
+    <!--            android:gravity="center"-->
+    <!--            android:textSize="30sp"></TextView>-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="40sp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:text="L."-->
+    <!--            android:gravity="center"-->
+    <!--            android:textSize="30sp"></TextView>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

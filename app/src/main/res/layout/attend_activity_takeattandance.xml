@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/allAttandActivityContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".attend_TakeAttandanceActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/yearDateSubjectInfo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/yearInfoLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_border_drawable"
+                android:orientation="horizontal"
+                android:paddingStart="2dp"
+                android:paddingEnd="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Year :"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/courseTermBatchInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:autoSizeMaxTextSize="20dp"
+                    android:autoSizeMinTextSize="5dp"
+                    android:autoSizeStepGranularity="1dp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center"
+                    android:text="Year"
+                    android:textSize="15dp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/subInfoLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_border_drawable"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                app:layout_constraintEnd_toStartOf="@+id/dateInfoLayout"
+                app:layout_constraintStart_toEndOf="@id/yearInfoLayout"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Sub :"
+                    android:textSize="15dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/subjectInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:autoSizeMaxTextSize="20dp"
+                    android:autoSizeMinTextSize="5dp"
+                    android:autoSizeStepGranularity="1dp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Sub"
+                    android:textSize="15dp"></TextView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/dateInfoLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_border_drawable"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="4dp"
+                android:paddingEnd="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Date :"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dateInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:autoSizeMaxTextSize="20dp"
+                    android:autoSizeMinTextSize="5dp"
+                    android:autoSizeStepGranularity="1dp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center"
+                    android:text="Date"
+                    android:textSize="15dp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/studentPresentAbsentInfo"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/background_border_drawable"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/yearDateSubjectInfo">
+
+            <TextView
+                android:id="@+id/studentNameInfo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center|start"
+                android:text="Student Name"
+                android:textColor="#000000"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/linearLayoutCompat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/presentTag"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/attand_present_textview_drawable"
+                    android:gravity="center"
+                    android:text="P"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/absentTag"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/attand_absent_textview_drawable"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/leaveTag"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/attand_leave_textview_drawable"
+                    android:gravity="center"
+                    android:text="L"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewForFillingStudent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#ECECEC"
+            app:layout_constraintBottom_toTopOf="@id/submitButtonContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/studentPresentAbsentInfo" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/submitButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:background="@drawable/background_border_drawable"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <Button
+                android:id="@+id/submitAttandance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/submit_button_background"
+                android:text="Submit"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/totalPALContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/totalPALContainer"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/totalPresentTag"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:autoSizeMaxTextSize="20dp"
+                    android:autoSizeMinTextSize="5dp"
+                    android:autoSizeStepGranularity="1dp"
+                    android:autoSizeTextType="uniform"
+                    android:background="@drawable/attand_present_textview_drawable"
+                    android:gravity="center"
+                    android:text="P"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/totalAbsentTag"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:autoSizeMaxTextSize="20dp"
+                    android:autoSizeMinTextSize="5dp"
+                    android:autoSizeStepGranularity="1dp"
+                    android:autoSizeTextType="uniform"
+                    android:background="@drawable/attand_absent_textview_drawable"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/totalLeaveTag"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:autoSizeMaxTextSize="20dp"
+                    android:autoSizeMinTextSize="5dp"
+                    android:autoSizeStepGranularity="1dp"
+                    android:autoSizeTextType="uniform"
+                    android:background="@drawable/attand_leave_textview_drawable"
+                    android:gravity="center"
+                    android:text="L"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/inputBlockerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AB000000"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

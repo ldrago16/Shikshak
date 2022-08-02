@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".promote_PromoteStudentActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/enterStudentNameIdFetchButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/promoteStudentSelectCourseTermContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:foregroundGravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/selectCourseLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/selectCoursesNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/select_year_sub_textview_background_drawable"
+                    android:gravity="center"
+                    android:text="Course Name"
+                    android:textColor="#ffffff"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/selectCourseSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/select_year_sub_spinner_background_drawable"
+                    android:clipToPadding="true"
+                    android:maxHeight="30dp"
+                    android:popupBackground="@drawable/select_year_sub_spinner_popup_background_drawable" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/selectTermLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/selectTermTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/select_year_sub_textview_background_drawable"
+                    android:gravity="center"
+                    android:text="Select Year/Sem."
+                    android:textColor="#ffffff"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/selectTermSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/select_year_sub_spinner_background_drawable"
+                    android:clipToPadding="true"
+                    android:maxHeight="30dp"
+                    android:popupBackground="@drawable/select_year_sub_spinner_popup_background_drawable" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/promoteStudentFetchSubmitButtonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/promoteStudentSelectCourseTermContainer">
+
+            <Button
+                android:id="@+id/promoteStudentFetchSubmitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/submit_button_background"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="fetch"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="2dp"
+        android:background="@drawable/all_border_drawable"
+        app:layout_constraintBottom_toTopOf="@id/promoteDeleteButtonAndShowTotalContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterStudentNameIdFetchButtonContainer">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/promoteDeleteStudentInfoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/all_border_drawable"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/studentNameInfo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center|start"
+                android:paddingStart="5dp"
+                android:text="Student Name"
+                android:textColor="#000000"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/linearLayoutCompat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/promoteStudentTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/attand_present_textview_drawable"
+                    android:gravity="center"
+                    android:text="P"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:tooltipText="Promote Students" />
+
+                <TextView
+                    android:id="@+id/deleteStudentTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/attand_absent_textview_drawable"
+                    android:gravity="center"
+                    android:text="D"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:tooltipText="Delete Students" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/promoteDeleteStudentInfoContainer">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/promoteDeleteStudentRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginTop="0dp"
+                android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/promoteDeleteButtonAndShowTotalContainer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="1dp"
+        android:paddingBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/promoteDeleteStudentButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="0dp"
+            android:enabled="false"
+            android:background="@drawable/submit_button_background"
+            android:text="Submit checked"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/showTotalCheckedContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/showTotalCheckedContainer"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/totalPromoteCheckedTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/attand_present_textview_drawable"
+                android:gravity="center"
+                android:minWidth="40dp"
+                android:text="0"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalDeleteCheckedTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/attand_absent_textview_drawable"
+                android:gravity="center"
+                android:minWidth="40dp"
+                android:text="0"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/inputBlockerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AB000000"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

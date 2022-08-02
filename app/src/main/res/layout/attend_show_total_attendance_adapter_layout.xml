@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="0sp"
+    android:backgroundTint="#ECECEC"
+    android:background="@drawable/background_border_drawable">
+
+    <TextView
+        android:id="@+id/studentSrNo"
+        android:layout_width="25dp"
+        android:layout_height="0dp"
+        android:paddingTop="5sp"
+        android:gravity="center"
+        android:background="@drawable/background_border_drawable"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="1dp"
+        android:autoSizeMaxTextSize="15dp"
+        android:autoSizeStepGranularity="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/studentName"
+        android:layout_width="0sp"
+        android:paddingLeft="5dp"
+        android:layout_height="0dp"
+        android:gravity="center|left"
+        android:text="Student Name"
+        android:maxLines="1"
+        android:textColor="#000000"
+        android:background="@drawable/background_border_drawable"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="10dp"
+        android:autoSizeMaxTextSize="15dp"
+        android:autoSizeStepGranularity="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/monthTotalPALConstraintLayout"
+        app:layout_constraintStart_toEndOf="@id/studentSrNo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/monthTotalPALConstraintLayout"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_border_drawable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <TextView
+            android:id="@+id/presentTextView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:padding="1dp"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_height="match_parent"
+            android:background="@drawable/show_total_attendance_drawable"
+            android:backgroundTint="#B0A5D6A7"
+            android:text="999"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/absentTextView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:padding="1dp"
+            android:textColor="#000000"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:backgroundTint="#B0F48FB1"
+            android:background="@drawable/show_total_attendance_drawable"
+            android:text="999"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/leaveTextView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:padding="1dp"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:backgroundTint="#B0FCBA73"
+            android:background="@drawable/show_total_attendance_drawable"
+            android:layout_margin="1dp"
+            android:text="999"
+            android:gravity="center" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--            <TextView-->
+<!--                android:layout_width="40sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="P."-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="30sp"></TextView>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="40sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="A."-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="30sp"></TextView>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="40sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="L."-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="30sp"></TextView>-->

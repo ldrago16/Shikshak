@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#E7E6E6"
+    tools:context=".adddeletesubject_AddDeleteSubjectActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/addDeleteSubjectAllContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/subjectAddDeleteOperationTypeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/attandanceTypeLayout">
+
+                    <TextView
+                        android:id="@+id/subjectAddDeleteOperationTypeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/select_year_sub_textview_background_drawable"
+                        android:gravity="center"
+                        android:text="Operation Type"
+                        android:textColor="#ffffff"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/subjectAddDeleteOperationTypeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:animateLayoutChanges="true"
+                        android:background="@drawable/select_year_sub_spinner_background_drawable"
+                        android:maxHeight="30dp"
+                        android:popupBackground="@drawable/select_year_sub_spinner_popup_background_drawable"
+                        android:spinnerMode="dropdown" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/selectCourseLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/selectCoursesNameTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/select_year_sub_textview_background_drawable"
+                        android:gravity="center"
+                        android:text="Course Name"
+                        android:textColor="#ffffff"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/selectCourseSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:animateLayoutChanges="true"
+                        android:layout_weight="1"
+                        android:popupBackground="@drawable/select_year_sub_spinner_popup_background_drawable"
+                        android:background="@drawable/select_year_sub_spinner_background_drawable"
+                        android:clipToPadding="true"
+                        android:maxHeight="30dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/selectTermLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/selectTermTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/select_year_sub_textview_background_drawable"
+                        android:gravity="center"
+                        android:text="Select Year/Sem."
+                        android:textColor="#ffffff"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/selectTermSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:animateLayoutChanges="true"
+                        android:layout_weight="1"
+                        android:popupBackground="@drawable/select_year_sub_spinner_popup_background_drawable"
+                        android:background="@drawable/select_year_sub_spinner_background_drawable"
+                        android:clipToPadding="true"
+                        android:maxHeight="30dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/addSubjectLayoutContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/setSubjectNameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/setSubjectNameText"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/select_year_sub_textview_background_drawable"
+                            android:gravity="center"
+                            android:text="Set Subject Name"
+                            android:textColor="#ffffff"
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/setSubjectNameEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:animateLayoutChanges="true"
+                            android:autoSizeMaxTextSize="15dp"
+                            android:autoSizeMinTextSize="10dp"
+                            android:autoSizeStepGranularity="1dp"
+                            android:autoSizeTextType="uniform"
+                            android:background="@drawable/edittext_background_drawable"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:inputType="text"
+                            android:imeOptions="actionDone"
+                            android:maxHeight="30dp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:popupBackground="@drawable/select_year_sub_spinner_popup_background_drawable" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/deleteSubjectLayoutContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/selectSubjectForDeleteLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/attandanceTypeLayout">
+
+                        <TextView
+                            android:id="@+id/selectSubjectForDeleteText"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/select_year_sub_textview_background_drawable"
+                            android:gravity="center"
+                            android:text="Select Subject"
+                            android:textColor="#ffffff"
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/selectSubjectForDeleteSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:animateLayoutChanges="true"
+                            android:layout_weight="1"
+                            android:popupBackground="@drawable/select_year_sub_spinner_popup_background_drawable"
+                            android:background="@drawable/select_year_sub_spinner_background_drawable"
+                            android:maxHeight="30dp"
+                            android:spinnerMode="dropdown" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/addCourseSubmitButtonContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addDeleteSubjectAllContainer">
+
+                <Button
+                    android:id="@+id/addDeleteSubjectSubmitButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/submit_button_background"
+                    android:paddingLeft="60dp"
+                    android:paddingRight="60dp"
+                    android:text="OK"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/inputBlockerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AB000000"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/addDeleteSubjectProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

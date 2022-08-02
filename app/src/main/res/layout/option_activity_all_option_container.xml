@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    tools:context=".option_AllOptionContainerActivity">
+
+    <include layout="@layout/dot_toolbar_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/regularAdminOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/profileButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/activeButtonColor"
+                android:text="Profile"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/takeViewAttendanceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/activeButtonColor"
+                android:text="Take / View attendance"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/uploadDeleteNoteButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/activeButtonColor"
+                android:text="Upload / Delete notes"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/takeRevokeSubjectButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/activeButtonColor"
+                android:text="Take / Revoke subject"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adminOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:enabled="false"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/searchEditStudentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/activeButtonColor"
+                android:text="Search / Edit student"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/promoteDeleteStudentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/activeButtonColor"
+                android:text="Promote / Delete student"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/studentRegistrationButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/activeButtonColor"
+                android:text="Student Registration"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/addDeleteCourseButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/activeButtonColor"
+                android:text="Add / Delete course"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/addDeleteSubjectButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/activeButtonColor"
+                android:text="Add / Delete subject"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/addDeleteTeacherButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/activeButtonColor"
+                android:text="Add / Delete Teacher"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
